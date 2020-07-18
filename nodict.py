@@ -39,7 +39,7 @@ class NoDict:
     def __repr__(self):
         """Return a string representing the NoDict contents."""
         # We want to show all the buckets vertically
-         return '\n'.join([f'{self.__class__.__name__}.{i}:{bucket}' for i, bucket in enumerate(self.buckets)])
+        return '\n'.join([f'{self.__class__.__name__}.{i}:{bucket}' for i, bucket in enumerate(self.buckets)])
 
 
     def add(self, key, value=None):
