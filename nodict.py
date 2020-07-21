@@ -63,7 +63,7 @@ class NoDict:
         If the key is not found, raise a KeyError exception.
         """
         node_to_find = Node(key)
-        bucket = self.buckets[new_node.hash % self.size]
+        bucket = self.buckets[node_to_find.hash % self.size]
 
         for k_v in bucket:
             if k_v == node_to_find:
