@@ -11,8 +11,8 @@ class Node:
     """Stores keys and values using hashing."""
     def __init__(self, key, value=None):
         """Takes key which is required and value which is optional."""
-        self.hash = hash(self.key)
         self.key = key
+        self.hash = hash(self.key)
         self.value = value
 
     def __repr__(self):
@@ -29,7 +29,7 @@ class NoDict:
     def __init__(self, num_buckets=10):
         """
         Takes in an optional number of buckets.
-        Implements the buckets to be a list of lists.  
+        Implements the buckets to be a list of lists.
         Ten buckets is the default value.
         """
         self.buckets = [[] for _ in range(num_buckets)]
@@ -45,7 +45,7 @@ class NoDict:
     def add(self, key, value=None):
         """
         Accepts a new key and value.
-        Stores it into the NoDict instance.  
+        Stores it into the NoDict instance.
         Should not allow duplicate keys.
         """
         new_node = Node(key, value)
